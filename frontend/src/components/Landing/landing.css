@@ -1,0 +1,61 @@
+.carausel-header{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+.carausel-image{
+    width: 100vh;
+}
+
+.categoryBox {
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 30vh;
+    width: 30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    
+}
+
+.categories{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.category1{
+    background-image: url("../../assets/images/boquets/b1.jpg");
+}
+.category2{
+    background-image: url("../../assets/images/decors/d1.jpg");
+}
+.category3{
+    background-image: url("../../assets/images/laptopskins/l1.jpg");
+}
+.category4{
+    background-image: url("../../assets/images/mugs/m1.jpg");
+}
+.category5{
+    background-image: url("../../assets/images/paintings/p1.jpg");
+}
+.category6{
+    background-image: url("../../assets/images/shirts/s1.jpg");
+}
+
+.categoryName{
+    text-decoration: none;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: black;
+    background-color: white;
+}
