@@ -8,6 +8,8 @@ import Test from "./components/Test/Test"
 import LandingPage from "./components/Landing/LandingPage.js"
 import Orders from './components/Orders/Orders'
 import OrdersAdmin from "./components/Orders/OrdersAdmin";
+import ProductAdmin from "./components/ProductAdmin/ProductAdmin";
+import "bootstrap/dist/css/bootstrap.min.css";
 //import Portfolio from "./components/Landing/Portfolio"
 export const config = {
  // endpoint: `http://prashant-qcartfrontend-v2.herokuapp.com:8082/api/v1`,
@@ -46,9 +48,9 @@ function App() {
         <Route exact path="/test">
           <Test />
         </Route>
-        {/* <Route exact path="/portfolio">
-          <Portfolio />
-        </Route> */}
+        <Route exact path="/productAdmin">
+          <ProductAdmin />
+        </Route>
       </Switch>
     </div>
   );

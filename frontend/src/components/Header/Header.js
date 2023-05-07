@@ -36,6 +36,12 @@ const Header = ({ children, hasHiddenAuthButtons }) => {
   const navigateToProducts=()=>{
     history.push("/landing");
   }
+  const navigateToProductsAdmin=()=>{
+    history.push("/productAdmin")
+  }
+  const navigateToOrdersAdmin=()=>{
+    history.push("/ordersAdmin")
+  }
   if (hasHiddenAuthButtons) {
     return (
       <Box className="header">
@@ -85,7 +91,14 @@ const Header = ({ children, hasHiddenAuthButtons }) => {
             <Button type="primary" onClick={navigateToProducts}>
               Products
             </Button>
-            :""
+            :(
+             window.location.pathname==='/ordersAdmin'?
+            <Button type="primary" onClick={navigateToProductsAdmin}>
+            Products
+          </Button>:
+          <Button type="primary" onClick={navigateToOrdersAdmin}>
+          Orders
+        </Button>)
             }
             
 

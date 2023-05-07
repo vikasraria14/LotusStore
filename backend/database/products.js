@@ -1,7 +1,7 @@
 const {connection} =require('./connection')
 const createProductTable = () => {
   
-
+ 
   const sql = `
     CREATE TABLE IF NOT EXISTS products (
       id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -106,4 +106,30 @@ const getProductsByCategory=(category)=>{
 }
 
 
-module.exports={insertProduct,createProductTable, getAllProducts, getProductById, getProductsByCategory}
+function updateProductCostById(id, newCost) {
+  // Create the SQL query string
+  const sql = `UPDATE products SET cost = ${newCost} WHERE id = ${id}`;
+
+  // Execute the query
+  connection.query(sql, (error, results, fields) => {
+    if (error) throw error;
+
+    console.log(`Updated cost for product with ID ${id}`);
+  });
+}
+
+function updateCategoryTable(table_name,name, newCost) {
+  // Create the SQL query string
+  const sql = `UPDATE ${table_name} SET cost = ${newCost} WHERE name = '${name}'`;
+
+  // Execute the query
+  connection.query(sql, (error, results, fields) => {
+    if (error) throw error;
+
+    console.log(`Updated cost for ${table_name} with ID ${name}`);
+  });
+}
+
+//updateProductCostById(2,5000)
+
+module.exports={insertProduct,createProductTable, getAllProducts, getProductById, getProductsByCategory,updateProductCostById,updateCategoryTable}

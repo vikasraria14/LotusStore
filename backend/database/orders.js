@@ -57,7 +57,7 @@ createOrdersTable()
   };
   
   const getOrder = async (orderId) => {
-    const sql = `SELECT * FROM orders WHERE id = ?`;
+    const sql = `SELECT * FROM orders WHERE id = ? ORDER BY order_date DESC`;
     try {
       const result =  connection.query(sql, [orderId]);
       return result;
@@ -68,7 +68,7 @@ createOrdersTable()
   };
   
   const getOrdersByUsername= async(username)=>{
-    const sql = `SELECT * FROM orders WHERE username = ?`;
+    const sql = `SELECT * FROM orders WHERE username = ? ORDER BY order_date DESC`;
     
     
     return new Promise((resolve, reject) => {
@@ -83,7 +83,7 @@ createOrdersTable()
   }
 
   const getAllOrders= async()=>{
-    const sql = `SELECT * FROM orders`;
+    const sql = `SELECT * FROM orders ORDER BY order_date DESC`;
     
     
     return new Promise((resolve, reject) => {

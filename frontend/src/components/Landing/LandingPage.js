@@ -6,7 +6,7 @@ import { useHistory, Link } from "react-router-dom";
 
 const LandingPage = () => {
     const category={
-        category:"Bouquet"
+        category:"Boquet"
     }
     const history=useHistory()
     const checkLoggedIn=()=>{
@@ -26,8 +26,8 @@ const LandingPage = () => {
       <Header />
       <Slideshow />
       <div className="categories">
-        <Link className="categoryBox category1" to={{ pathname: '/', state: { category:"Bouquet" } } }>
-          <CategoryBox name={"Bouquet"} />
+        <Link className="categoryBox category1" to={{ pathname: '/', state: { category:"Boquet" } } }>
+          <CategoryBox name={"Boquet"} />
         </Link>
         <Link className="categoryBox category2" to={{ pathname: '/', state: { category:"Decor" } }}>
           <CategoryBox name={"Decors"}/>

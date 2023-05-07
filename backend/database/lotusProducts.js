@@ -33,6 +33,10 @@ const insertProduct = (productData) => {
     });
   };
 
+
+  
+  
+
   
 
   for(let i=1;i<7;i++)
@@ -109,3 +113,4 @@ const insertProduct = (productData) => {
       insertProduct(productData)
   }
   
+  //createNewTableByCategory('Decor','Decor')
