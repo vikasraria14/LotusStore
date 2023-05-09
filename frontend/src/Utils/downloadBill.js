@@ -36,7 +36,7 @@ doc.setFontSize(14);
     doc.text(`Name: ${data.username}`,40,130);
     doc.text(`Product Name: ${data.product_name}`,40,140)
     doc.text(`Quantity: ${data.quantity}`,40,150)
-    doc.text(`Cost :$${data.price}`,40,230);
+    doc.text(`Cost :$${data.price}`,40,160);
     
   
     // // Save the PDF file
